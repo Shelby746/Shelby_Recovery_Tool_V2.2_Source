@@ -2,8 +2,6 @@
 
 MediaTek flashing and Android recovery in one Windows window.
 
-![Shelby Recovery Tool home screen](docs/screenshots/shelby_flash.png)
-
 Windows 10 / 11 | Python 3.11+ | PySide6 | single portable EXE
 
 [About](#about-the-tool) | [Home screen](#the-home-screen) | [Pages](#pages) |
@@ -40,8 +38,6 @@ build keeps settings, logs and history in a portable `data` folder beside the
 EXE.
 
 ## The home screen
-
-![MTK Flash workspace with a scatter loaded](docs/screenshots/shelby_flash_loaded.png)
 
 The app opens on **MTK Flash**. The layout is fixed. There are no dashboard
 cards and the page does not scroll at 720p. The left side is the log, the right
@@ -117,8 +113,6 @@ heartbeat makes it clear the app is still working.
 
 ### Fastboot
 
-![Fastboot page](docs/screenshots/shelby_fastboot.png)
-
 The device list has its own refresh, separate from the model row. Device actions
 cover reboot to system, bootloader and recovery. The flash card takes a
 partition name and an image, with a dedicated **Flash boot** shortcut. Below
@@ -126,8 +120,6 @@ that are erase and a raw command field for things like `getvar all` or
 `oem device-info`.
 
 ### GSI Installer
-
-![GSI Installer page](docs/screenshots/shelby_gsi.png)
 
 The installer keeps the same 11 steps as the batch workflow. It accepts ADB,
 Fastboot or Fastbootd as the entry method. The progress list shows which step
@@ -140,8 +132,6 @@ says so and waits.
 
 ### Root Tools
 
-![Root Tools page](docs/screenshots/shelby_root.png)
-
 This page flashes a boot image that was already patched with Magisk on the
 phone. It does not patch images itself. Pick the patched boot image and the
 stock vbmeta from the same firmware, then use **Flash boot image** or the
@@ -151,8 +141,6 @@ stock vbmeta, reboot.
 The bootloader must already be unlocked. Unlocking wipes data.
 
 ### Transsion Tools
-
-![Transsion Tools page](docs/screenshots/shelby_transsion.png)
 
 The package list has 80 known Transsion entries: 55 safe and 25 all-in-one.
 **Scan device** reads the installed state through ADB. The table filters by
@@ -164,8 +152,6 @@ through the same `pm` and `cmd package` calls as the batch workflow.
 
 These are tabs inside MTK Flash, not separate pages.
 
-![Service tab](docs/screenshots/shelby_service.png)
-
 **Service** holds the backup folder, flash mode, engine and DA status checks,
 partition check, storage info, device keys, active slot read and set, reboot,
 full backup, and the USB link check. **Check USB link** prints the real
@@ -173,20 +159,14 @@ full backup, and the USB link check. **Check USB link** prints the real
 interface, then says which part is missing. **Restart ADB** runs
 `adb kill-server`, `start-server` and rescans.
 
-![AntiCrack tab](docs/screenshots/shelby_anticrack.png)
-
 **AntiCrack / Trigger P7** shows the selected auth file, verifies the DA
 handshake, reads device keys and tracks the four handshake stages. A signed
 auth file is required for DAA and SLA protected chips.
-
-![Partition Manager tab](docs/screenshots/shelby_partition_manager.png)
 
 **Partition Manager** is a read-only view of every partition in the loaded
 scatter, with size, region and download flag.
 
 ### History
-
-![Operation history](docs/screenshots/shelby_history.png)
 
 Every task is stored in `history.json` with its result, elapsed time and
 session log. Double-click a row to open the log for that run. History is
@@ -196,8 +176,6 @@ available from the clock icon at the bottom of the mode rail.
 
 **SHELBY 746** is the name on the About Developer dialog, opened from **Dev**
 at the bottom of the mode rail.
-
-![About Developer dialog](docs/screenshots/shelby_account.png)
 
 The tool grew out of a batch script I used for MediaTek work. The script did
 the job, but every option was a menu number, the log scrolled away, and a failed
